@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,6 +7,7 @@ import java.util.HashMap;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class LoginPage implements ActionListener{
@@ -14,7 +16,7 @@ public class LoginPage implements ActionListener{
 	JButton loginButton = new JButton("Login");
 	JButton resetButton = new JButton("Reset");
 	JTextField userIDField = new JTextField();
-	JTextField userPasswordField = new JTextField();
+	JPasswordField userPasswordField = new JPasswordField();
 	JLabel userIDLabel = new JLabel("user ID: ");
 	JLabel userPasswordLabel = new JLabel("password: ");
 	JLabel messageLabel = new JLabel();
@@ -64,6 +66,21 @@ public class LoginPage implements ActionListener{
 			userPasswordField.setText("");
 		}
 		
+		if(e.getSource()==loginButton) {
+			
+			String userID = userIDField.getText();
+			String password = String.valueOf(userPasswordField.getPassword());
+		
+			if(logininfo.containsKey(userID)) {
+				if(logininfo.get(userID).equals(password)) {
+					messageLabel.setForeground(Color.green);
+					messageLabel.setText("Login Succesful");
+					WellcomePage wellcomePage = new WellcomePage();
+				}
+				
+			}
+			
+		}
 	}
 	
 }
