@@ -35,6 +35,15 @@ public class LoginPage implements ActionListener{
 		userIDField.setBounds(125,100,200,25);
 		userPasswordField.setBounds(125,150,200,25);
 		
+		loginButton.setBounds(125,200,100,25);
+		loginButton.addActionListener(this);
+		
+		resetButton.setBounds(225,200,100,25);
+		loginButton.addActionListener(this);
+		
+		
+		frame.add(loginButton);
+		frame.add(resetButton);
 		frame.add(userIDField);
 		frame.add(userPasswordField);
 		frame.add(messageLabel);
