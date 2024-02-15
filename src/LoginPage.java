@@ -1,3 +1,4 @@
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -28,6 +29,10 @@ public class LoginPage implements ActionListener{
 		userIDLabel.setBounds(50,100,75,25);
 		userPasswordLabel.setBounds(50,150,75,25);
 		
+		messageLabel.setBounds(125,250,250,35);
+		messageLabel.setFont(new Font(null, Font.ITALIC, 25));
+		
+		frame.add(messageLabel);
 		frame.add(userIDLabel);
 		frame.add(userPasswordLabel);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
