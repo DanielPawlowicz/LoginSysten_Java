@@ -39,7 +39,7 @@ public class LoginPage implements ActionListener{
 		loginButton.addActionListener(this);
 		
 		resetButton.setBounds(225,200,100,25);
-		loginButton.addActionListener(this);
+		resetButton.addActionListener(this);
 		
 		
 		frame.add(loginButton);
@@ -58,6 +58,11 @@ public class LoginPage implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		
+		if(e.getSource()==resetButton) {
+			userIDField.setText("");
+			userPasswordField.setText("");
+		}
 		
 	}
 	
