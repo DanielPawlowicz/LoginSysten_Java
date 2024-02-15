@@ -77,12 +77,15 @@ public class LoginPage implements ActionListener{
 					messageLabel.setText("Login Succesful");
 					WellcomePage wellcomePage = new WellcomePage();
 				}
-				else
-				{
+				else {
 					messageLabel.setForeground(Color.red);
 					messageLabel.setText("Wrong Password");
 				}
 				
+			} 
+			else {
+				messageLabel.setForeground(Color.red);
+				messageLabel.setText("Username not found");
 			}
 			
 		}
