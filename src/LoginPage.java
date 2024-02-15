@@ -77,6 +77,11 @@ public class LoginPage implements ActionListener{
 					messageLabel.setText("Login Succesful");
 					WellcomePage wellcomePage = new WellcomePage();
 				}
+				else
+				{
+					messageLabel.setForeground(Color.red);
+					messageLabel.setText("Wrong Password");
+				}
 				
 			}
 			
